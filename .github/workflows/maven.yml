@@ -1,0 +1,28 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main", "master" ] # Ajusta si la teva branca principal té un altre nom
+  pull_request:
+    branches: [ "main", "master" ] # Ajusta si la teva branca principal té un altre nom
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code # Pas per descarregar el codi del teu repositori
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 11 # Pas per configurar Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'        # Assegura't que coincideix amb <maven.compiler.source> del pom.xml
+          distribution: 'temurin'   # Pots triar altres distribucions de JDK si prefereixes
+          cache: maven              # Activa la memòria cau per a les dependències de Maven
+
+      - name: Build with Maven and Run Tests # Pas per construir amb Maven i executar proves
+        run: mvn -B package --file pom.xml
+        # L'opció -B (batch mode) fa que Maven no demani interacció i sigui més adequat per a CI.
+        # 'package' compila, executa tests (si n'hi ha) i crea el JAR.
+        # Si només vols executar tests: run: mvn -B test --file pom.xml
