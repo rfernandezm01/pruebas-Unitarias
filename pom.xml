@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Identificadors del teu projecte -->
+    <groupId>com.teuinstitut.elmeugrup</groupId> <!-- Canvia-ho pel teu groupId -->
+    <artifactId>PracticaRefaccioProves</artifactId> <!-- Nom del teu projecte -->
+    <version>1.0-SNAPSHOT</version> <!-- Versió inicial -->
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source> <!-- Versió de Java (font) -->
+        <maven.compiler.target>11</maven.compiler.target> <!-- Versió de Java (destí) -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Codificació -->
+    </properties>
+
+    <dependencies>
+        <!-- Dependència per a JUnit 5 (per a les proves de l'ex2 en endavant) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version> <!-- O la darrera versió estable -->
+            <scope>test</scope> <!-- Aquesta dependència només s'usa per a les proves -->
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin per compilar el codi Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- O una versió més recent -->
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+            <!-- Plugin per executar les proves (Surefire) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version> <!-- O una versió més recent -->
+            </plugin>
+        </plugins>
+    </build>
+</project>
