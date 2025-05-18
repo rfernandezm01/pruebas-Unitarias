@@ -1,6 +1,6 @@
-package ex4;
+package main.java.ex1.ex4;
 
-// No es necesario importar ex4.HashEntry porque está en el mismo paquete y es accesible.
+// No es necesario importar main.java.ex1.ex4.HashEntry porque está en el mismo paquete y es accesible.
 
 public class HashTable<K, V> {
     private static final int INITIAL_CAPACITY = 16;

@@ -1,4 +1,4 @@
-package ex4;
+package main.java.ex1.ex4;
 
 // Imports para JUnit 5
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 // Import para Objects.hash usado en MyObject.hashCode()
 import java.util.Objects;
 
-// No es necesario importar ex4.HashTable ni ex4.HashEntry porque las pruebas están en el mismo paquete
+// No es necesario importar main.java.ex1.ex4.HashTable ni main.java.ex1.ex4.HashEntry porque las pruebas están en el mismo paquete
 // y MyObject está definida como clase interna de prueba o en el mismo archivo.
 
 class MyObject { // Clase para probar claves/valores personalizados
@@ -70,7 +70,7 @@ public class HashTableTest {
         assertEquals(1, htStringString.count());
     }
 
-    // ... (El resto de las pruebas de ex4/HashTableTest.java como en la respuesta anterior)
+    // ... (El resto de las pruebas de main.java.ex1.ex4/HashTableTest.java como en la respuesta anterior)
     // ... (No se necesitan más imports para el resto de los tests de este archivo)
 
     @Test

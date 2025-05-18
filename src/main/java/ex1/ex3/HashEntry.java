@@ -1,4 +1,4 @@
-package ex3;
+package main.java.ex1.ex3;
 
 // No se requieren imports explícitos.
 

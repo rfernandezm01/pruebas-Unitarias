@@ -1,6 +1,6 @@
-package ex3;
+package main.java.ex1.ex3;
 
-// No es necesario importar ex3.HashEntry porque está en el mismo paquete y es accesible.
+// No es necesario importar main.java.ex1.ex3.HashEntry porque está en el mismo paquete y es accesible.
 
 public class HashTable {
     private static final int INITIAL_CAPACITY = 16;
@@ -9,7 +9,7 @@ public class HashTable {
     private int _size;
 
     public HashTable() {
-        this.table = new HashEntry[INITIAL_CAPACITY]; // Usa ex3.HashEntry
+        this.table = new HashEntry[INITIAL_CAPACITY]; // Usa main.java.ex1.ex3.HashEntry
         this._count = 0;
         this._size = 0;
     }
@@ -69,7 +69,7 @@ public class HashTable {
         }
 
         _count++;
-        HashEntry newEntry = new HashEntry(key, value); // Usa ex3.HashEntry
+        HashEntry newEntry = new HashEntry(key, value); // Usa main.java.ex1.ex3.HashEntry
 
         HashEntry head = table[bucketIndex]; // No es realmente necesario re-obtener 'head' aquí
         // 'result.previousEntry' es suficiente

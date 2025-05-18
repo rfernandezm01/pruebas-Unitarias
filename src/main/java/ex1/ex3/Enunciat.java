@@ -1,9 +1,9 @@
-package ex3;
+package main.java.ex1.ex3;
 
 public class Enunciat {
 /*
     1. Copia la classe HastTable de l'exercici anterior així com els seus jocs de proves dins aquest package i modifica
-       el codi font perquè el faci servir (canvia "ex1" per "ex2" allà on toqui).
+       el codi font perquè el faci servir (canvia "main.java.ex1" per "main.java.ex1.ex2" allà on toqui).
 
     2. Aplica-hi el mètode de refacció "extracció de classe" i explica per què creus que ha sigut convenient
        aplicar-los.

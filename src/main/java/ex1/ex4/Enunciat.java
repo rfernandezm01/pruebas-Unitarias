@@ -1,9 +1,9 @@
-package ex4;
+package main.java.ex1.ex4;
 
 public class Enunciat {
 /*
     1. Copia la classe HastTable de l'exercici anterior així com els seus jocs de proves dins aquest package i modifica
-       el codi font perquè el faci servir (canvia "ex2" per "ex3" allà on toqui).
+       el codi font perquè el faci servir (canvia "main.java.ex1.ex2" per "main.java.ex1.ex3" allà on toqui).
 
     2. Fes que la taula de hash permeti emmagatzemar altres tipus de dades (object) i no només strings, per això et
        caldrà modificar el tipus de dada que emmagatzema la classe "HashEntry" així com alguns paràmetres dels mètodes

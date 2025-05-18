@@ -1,4 +1,4 @@
-package ex2;
+package main.java.ex1.ex2;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

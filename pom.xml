@@ -16,7 +16,7 @@
     </properties>
 
     <dependencies>
-        <!-- Dependència per a JUnit 5 (per a les proves de l'ex2 en endavant) -->
+        <!-- Dependència per a JUnit 5 (per a les proves de l'main.java.ex1.ex2 en endavant) -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
