@@ -1,0 +1,52 @@
+# Fitxers i carpetes compilats de Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Fitxers de configuració específics d'IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Fitxers de configuració d'altres IDEs (per si de cas)
+.classpath
+.project
+.settings/
+*.nbattrs
+nbproject/ # NetBeans
+*.vscode/ # VSCode
+
+# Fitxers de log
+*.log
+logs/
+
+# Fitxers de sistema operatiu
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+ehthumbs_vista.db # Windows
+
+# Fitxers temporals i de backup
+*~
+*.bak
+*.swp
+*.tmp
+
+# Fitxers de configuració de build (si en fas servir alguns específics que no vols pujar)
+# local.properties
+
+# Altres fitxers binaris o generats que no s'han de versionar
+# *.jar (excepte si tens llibreries locals a un directori 'lib' i vols incloure-les)
+# *.war
+# *.ear
+
+# Fitxers de dependències descarregades si no fas servir un gestor com Maven/Gradle
+# (No aplicable aquí, ja que fem servir Maven)
+# lib/
