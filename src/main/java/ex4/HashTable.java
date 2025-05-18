@@ -1,4 +1,4 @@
-package main.java.ex1.ex4;
+package main.java.ex4;
 
 // No es necesario importar main.java.ex1.ex4.HashEntry porque está en el mismo paquete y es accesible.
 

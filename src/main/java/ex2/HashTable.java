@@ -1,7 +1,5 @@
-package main.java.ex1.ex2;
+package main.java.ex2;
 
-// No es necesario un import explícito de main.java.ex1.ex2.HashEntry si ambas están en el paquete main.java.ex1.ex2
-// y HashEntry.java tiene visibilidad de paquete o es pública.
 
 public class HashTable {
     private static final int INITIAL_CAPACITY = 16;

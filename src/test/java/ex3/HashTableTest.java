@@ -1,5 +1,7 @@
-package main.java.ex1.ex2;
+package test.java.ex3;
 
+
+import main.java.ex2.HashTable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -7,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HashTableTest {
 
-    private HashTable ht;
+    private main.java.ex2.HashTable ht;
 
     // Claves que colisionan (asumiendo INITIAL_CAPACITY = 16):
     // "A".hashCode() = 65 -> 65 % 16 = 1

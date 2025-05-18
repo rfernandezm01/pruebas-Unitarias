@@ -1,8 +1,6 @@
-package main.java.ex1.ex3;
+package main.java.ex2; // DECLARACIÓ DE PACKAGE CORRECTA
 
-// No se requieren imports explícitos.
-
-public class HashEntry { // Hecha pública para claridad, podría ser de paquete.
+public class HashEntry {
     String key;
     String value;
     HashEntry next;

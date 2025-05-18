@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Identificadors del teu projecte -->
-    <groupId>com.teuinstitut.elmeugrup</groupId> <!-- Canvia-ho pel teu groupId -->
+    <groupId>com.teuinstitut.elmeugrup</groupId> <!-- Canvia-ho pel teu groupId si cal -->
     <artifactId>PracticaRefaccioProves</artifactId> <!-- Nom del teu projecte -->
     <version>1.0-SNAPSHOT</version> <!-- Versió inicial -->
 
@@ -16,7 +16,7 @@
     </properties>
 
     <dependencies>
-        <!-- Dependència per a JUnit 5 (per a les proves de l'main.java.ex1.ex2 en endavant) -->
+        <!-- Dependència per a JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

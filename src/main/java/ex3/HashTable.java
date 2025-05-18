@@ -1,6 +1,5 @@
-package main.java.ex1.ex3;
+package main.java.ex3;
 
-// No es necesario importar main.java.ex1.ex3.HashEntry porque está en el mismo paquete y es accesible.
 
 public class HashTable {
     private static final int INITIAL_CAPACITY = 16;
