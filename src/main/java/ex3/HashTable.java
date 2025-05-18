@@ -8,7 +8,7 @@ public class HashTable {
     private int _size;
 
     public HashTable() {
-        this.table = new HashEntry[INITIAL_CAPACITY]; // Usa main.java.ex1.ex3.HashEntry
+        this.table = new HashEntry[INITIAL_CAPACITY];
         this._count = 0;
         this._size = 0;
     }
@@ -20,7 +20,7 @@ public class HashTable {
         return index < 0 ? index + table.length : index;
     }
 
-    private static class FindResult { // Clase helper interna
+    private static class FindResult {
         HashEntry foundEntry;
         HashEntry previousEntry;
         FindResult(HashEntry found, HashEntry prev) {
@@ -68,18 +68,17 @@ public class HashTable {
         }
 
         _count++;
-        HashEntry newEntry = new HashEntry(key, value); // Usa main.java.ex1.ex3.HashEntry
+        HashEntry newEntry = new HashEntry(key, value);
 
-        HashEntry head = table[bucketIndex]; // No es realmente necesario re-obtener 'head' aquí
-        // 'result.previousEntry' es suficiente
+        HashEntry head = table[bucketIndex];
+
         HashEntry lastNodeInBucket = result.previousEntry;
 
-        if (table[bucketIndex] == null) { // Si el bucket estaba vacío (head era null)
+        if (table[bucketIndex] == null) {
             table[bucketIndex] = newEntry;
             _size++;
         } else {
-            // 'lastNodeInBucket' es el último nodo si la clave no se encontró
-            // y el bucket no estaba vacío.
+
             lastNodeInBucket.next = newEntry;
         }
     }

@@ -1,8 +1,8 @@
 package main.java.ex3;
 
-// No se requieren imports explícitos.
 
-public class HashEntry { // Hecha pública para claridad, podría ser de paquete.
+
+public class HashEntry {
     String key;
     String value;
     HashEntry next;

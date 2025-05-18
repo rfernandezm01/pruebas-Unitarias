@@ -3,7 +3,7 @@ package main.java.ex2;
 
 public class HashTable {
     private static final int INITIAL_CAPACITY = 16;
-    private HashEntry[] table; // Ahora se refiere a la clase main.java.ex1.ex2.HashEntry (separada)
+    private HashEntry[] table;
     private int _count;
     private int _size;
 
@@ -26,7 +26,7 @@ public class HashTable {
         }
 
         int bucketIndex = getBucketIndex(key);
-        // HashEntry es ahora la clase separada main.java.ex1.ex2.HashEntry
+
         HashEntry head = table[bucketIndex];
         HashEntry current = head;
         HashEntry prev = null;
@@ -41,7 +41,7 @@ public class HashTable {
         }
 
         _count++;
-        HashEntry newEntry = new HashEntry(key, value); // Crea instancia de main.java.ex1.ex2.HashEntry
+        HashEntry newEntry = new HashEntry(key, value);
         if (head == null) {
             table[bucketIndex] = newEntry;
             _size++;
@@ -56,7 +56,7 @@ public class HashTable {
         if (key == null) return null;
 
         int bucketIndex = getBucketIndex(key);
-        HashEntry current = table[bucketIndex]; // main.java.ex1.ex2.HashEntry
+        HashEntry current = table[bucketIndex];
 
         while (current != null) {
             if (current.key.equals(key)) {
@@ -71,7 +71,7 @@ public class HashTable {
         if (key == null) return;
 
         int bucketIndex = getBucketIndex(key);
-        HashEntry current = table[bucketIndex]; // main.java.ex1.ex2.HashEntry
+        HashEntry current = table[bucketIndex];
         HashEntry prev = null;
 
         while (current != null) {
@@ -108,7 +108,7 @@ public class HashTable {
         for (int i = 0; i < table.length; i++) {
             if (table[i] != null) {
                 sb.append("[").append(i).append("] -> ");
-                HashEntry current = table[i]; // main.java.ex1.ex2.HashEntry
+                HashEntry current = table[i];
                 while (current != null) {
                     sb.append("<").append(current.key).append(", ").append(current.value).append(">");
                     if (current.next != null) {

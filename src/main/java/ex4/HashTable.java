@@ -1,6 +1,5 @@
 package main.java.ex4;
 
-// No es necesario importar main.java.ex1.ex4.HashEntry porque está en el mismo paquete y es accesible.
 
 public class HashTable<K, V> {
     private static final int INITIAL_CAPACITY = 16;
@@ -8,16 +7,16 @@ public class HashTable<K, V> {
     private int _count;
     private int _size;
 
-    @SuppressWarnings("unchecked") // Necesario para la creación de array genérico
+    @SuppressWarnings("unchecked")
     public HashTable() {
         this.table = (HashEntry<K, V>[]) new HashEntry[INITIAL_CAPACITY];
         this._count = 0;
         this._size = 0;
     }
 
-    private int getBucketIndex(K key) { // Clave de tipo K
-        if (key == null) return 0; // Podría lanzar IllegalArgumentException
-        int hashCode = key.hashCode(); // K debe tener un hashCode() válido
+    private int getBucketIndex(K key) {
+        if (key == null) return 0;
+        int hashCode = key.hashCode();
         int index = hashCode % table.length;
         return index < 0 ? index + table.length : index;
     }
@@ -35,8 +34,7 @@ public class HashTable<K, V> {
     private HashEntry<K, V> findEntryInBucket(int bucketIndex, K key) {
         HashEntry<K, V> current = table[bucketIndex];
         while (current != null) {
-            // Para comparar claves de tipo K, usamos .equals()
-            // K debe tener un método equals() bien implementado.
+
             if (current.getKey().equals(key)) {
                 return current;
             }
@@ -51,7 +49,7 @@ public class HashTable<K, V> {
         HashEntry<K, V> prev = null;
 
         while (current != null) {
-            if (current.getKey().equals(key)) { // Usar .equals() para comparar claves
+            if (current.getKey().equals(key)) {
                 return new FindResult<>(current, prev);
             }
             prev = current;
@@ -60,9 +58,8 @@ public class HashTable<K, V> {
         return new FindResult<>(null, prev);
     }
 
-    public void put(K key, V value) { // Métodos usan K y V
+    public void put(K key, V value) {
         if (key == null) {
-            // System.err.println("La clave no puede ser nula.");
             return;
         }
 
@@ -71,29 +68,29 @@ public class HashTable<K, V> {
         HashEntry<K,V> entryToUpdate = result.foundEntry;
 
         if (entryToUpdate != null) {
-            entryToUpdate.setValue(value); // Usar setter
+            entryToUpdate.setValue(value);
             return;
         }
 
         _count++;
-        HashEntry<K, V> newEntry = new HashEntry<>(key, value); // Crear HashEntry<K,V>
+        HashEntry<K, V> newEntry = new HashEntry<>(key, value);
 
         HashEntry<K,V> lastNodeInBucket = result.previousEntry;
 
-        if (table[bucketIndex] == null) { // Bucket estaba vacío
+        if (table[bucketIndex] == null) {
             table[bucketIndex] = newEntry;
             _size++;
         } else {
-            lastNodeInBucket.setNext(newEntry); // Usar setter
+            lastNodeInBucket.setNext(newEntry);
         }
     }
 
-    public V get(K key) { // Devuelve un valor de tipo V
+    public V get(K key) {
         if (key == null) return null;
         int bucketIndex = getBucketIndex(key);
 
         HashEntry<K,V> entry = findEntryInBucket(bucketIndex, key);
-        return (entry != null) ? entry.getValue() : null; // Usar getter
+        return (entry != null) ? entry.getValue() : null;
     }
 
     public void drop(K key) {
@@ -110,7 +107,7 @@ public class HashTable<K, V> {
             if (previousNode == null) {
                 table[bucketIndex] = entryToRemove.getNext();
             } else {
-                previousNode.setNext(entryToRemove.getNext()); // Usar setter
+                previousNode.setNext(entryToRemove.getNext());
             }
 
             if (table[bucketIndex] == null) {
