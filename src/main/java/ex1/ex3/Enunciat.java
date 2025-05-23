@@ -1,4 +1,4 @@
-package main.java.ex3;
+package main.java.ex1.ex3;
 
 public class Enunciat {
 /*
